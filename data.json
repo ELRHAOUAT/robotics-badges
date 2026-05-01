@@ -57,11 +57,22 @@
     {
       "id": "007",
       "name": "اسراء العدوتي",
-      "profile_pic": "assets/images/007-israa-eladdouti/profile.jpg",
+      "profile_pic": "assets/images/007-israa-eladdouti/profile.png",
       "project": "مشروع مدينة الدريوش الذكية",
       "role": "مهندس أنظمة السكن الذكي",
       "description": "ابتكار وتطبيق حلول تقنية لتحسين كفاءة استهلاك الطاقة والراحة والأمان داخل المنازل في النموذج المصغر للمدينة.",
-      "gallery": []
+      "gallery": [
+        "assets/images/007-israa-eladdouti/profile.png",
+        "assets/images/007-israa-eladdouti/p1.jpg",
+        "assets/images/007-israa-eladdouti/p2.jpg",
+        "assets/images/007-israa-eladdouti/p3.jpg",
+        "assets/images/007-israa-eladdouti/p4.jpg",
+        "assets/images/007-israa-eladdouti/p5.jpg",
+        "assets/images/007-israa-eladdouti/p6.jpg",
+        "assets/images/007-israa-eladdouti/p7.jpg",
+        "assets/images/007-israa-eladdouti/p8.jpg",
+        "assets/images/007-israa-eladdouti/p9.jpg"
+      ]
     },
     {
       "id": "008",
