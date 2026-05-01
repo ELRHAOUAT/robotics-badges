@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البطاقة المهنية - نادي الروبوتيك</title>
+    <!-- ربط خطوط Google Fonts (مثلا خط Tajawal زوين للعربية) -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="badge-container">
+        <!-- قسم رأس الصفحة (الهيدر) فيه الشعارات -->
+        <header class="logos-header">
+            <img src="assets/images/logos/school-logo.png" alt="شعار المؤسسة" class="logo school-logo">
+            <img src="assets/images/logos/club-logo.png" alt="شعار نادي الروبوتيك" class="logo club-logo">
+        </header>
+
+        <!-- قسم المعلومات الشخصية -->
+        <div class="profile-section">
+            <!-- إضافة الصورة الشخصية هنا -->
+            <div class="profile-img-container fade-in">
+                <img id="student-photo" src="" alt="صورة المهندس">
+            </div>
+
+            <h1 id="student-name" class="fade-in">--</h1>
+            <div class="role-badge">
+                <span id="student-role">--</span>
+            </div>
+            <h2 id="project-name">--</h2>
+        </div>
+
+        <!-- قسم الفكرة العامة -->
+        <section class="info-section">
+            <div class="section-title">
+                <span class="icon">💡</span> الفكرة العامة للمشروع
+            </div>
+            <p id="project-desc">جاري تحميل البيانات...</p>
+        </section>
+
+        <!-- قسم الصور التوثيقية -->
+        <section class="gallery-section">
+            <div class="section-title">
+                <span class="icon">📸</span> التوثيق الميداني
+            </div>
+            <div id="gallery-container" class="gallery-grid">
+                <!-- الصور ستضاف هنا عبر الجافاسكريبت -->
+            </div>
+        </section>
+
+        <!-- تذييل الصفحة -->
+        <footer class="badge-footer">
+            <p>نادي الروبوتيك والذكاء الاصطناعي - ثانوية الوحدة الإعدادية</p>
+            <button id="download-pdf" class="btn-download">حفظ كملف PDF</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
