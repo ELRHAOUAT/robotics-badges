@@ -72,10 +72,35 @@ async function loadStudentData() {
 // 4. تشغيل الدالة مباشرة بعد تحميل الصفحة
 window.addEventListener('DOMContentLoaded', loadStudentData);
 
-// 5. زر تحميل PDF (برمجة مبدئية)
+// =========================================
+// 5. برمجة زر تحميل PDF
+// =========================================
 const downloadBtn = document.getElementById('download-pdf');
+
 if(downloadBtn) {
     downloadBtn.addEventListener('click', () => {
-        alert("البيانات تم تحميلها بنجاح. سنقوم بإضافة مكتبة html2pdf لتفعيل هذا الزر في الخطوة القادمة.");
+        // 1. تحديد العنصر اللي بغينا نحولوه لـ PDF (الحاوية ديال البادج كاملة)
+        const badgeElement = document.querySelector('.badge-container');
+
+        // 2. إخفاء زر التحميل مؤقتاً باش مايبانش مطبوع داخل الـ PDF
+        downloadBtn.style.display = 'none';
+
+        // 3. جلب اسم المهندس باش نسميو بيه ملف الـ PDF أوتوماتيكياً
+        const studentNameForFile = nameEl.textContent !== '--' ? nameEl.textContent : 'مهندس';
+        
+        // 4. إعدادات استخراج الـ PDF
+        const opt = {
+            margin:       0.2, // هامش صغير باش مايجيش مقطوع
+            filename:     `البطاقة-المهنية-${studentNameForFile}.pdf`, // سمية الملف
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2, useCORS: true }, // scale 2 كترفع الجودة، و useCORS باش يقرا الصور بشكل صحيح
+            jsPDF:        { unit: 'in', format: 'a5', orientation: 'portrait' } // استعملنا قياس A5 حيت البادج عمودي
+        };
+
+        // 5. عملية التوليد والتحميل
+        html2pdf().set(opt).from(badgeElement).save().then(() => {
+            // 6. من بعد ما يكمل التحميل، كنرجعو الزر يبان فالموقع
+            downloadBtn.style.display = 'block';
+        });
     });
 }
