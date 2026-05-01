@@ -166,11 +166,25 @@
     {
       "id": "014",
       "name": "هشام اوسرود",
-      "profile_pic": "assets/images/014-hicham-ousroud/profile.jpg",
+      "profile_pic": "assets/images/014-hicham-ousroud/profile.png",
       "project": "مشروع مدينة الدريوش الذكية",
       "role": "مطور النظم والذكاء الاصطناعي",
       "description": "ربط مختلف أنظمة المدينة بمنصة مركزية تعتمد على الذكاء الاصطناعي لتحليل البيانات وإدارتها بفعالية.",
-      "gallery": []
+      "gallery": [
+        "assets/images/014-hicham-ousroud/profile.png",
+        "assets/images/014-hicham-ousroud/p1.jpg",
+        "assets/images/014-hicham-ousroud/p2.jpg",
+        "assets/images/014-hicham-ousroud/p3.jpg",
+        "assets/images/014-hicham-ousroud/p4.jpg",
+        "assets/images/014-hicham-ousroud/p5.jpg",
+        "assets/images/014-hicham-ousroud/p6.jpg",
+        "assets/images/014-hicham-ousroud/p7.jpg",
+        "assets/images/014-hicham-ousroud/p8.jpg",
+        "assets/images/014-hicham-ousroud/p9.jpg",
+        "assets/images/014-hicham-ousroud/p10.jpg",
+        "assets/images/014-hicham-ousroud/p11.jpg",
+        "assets/images/014-hicham-ousroud/p12.jpg"
+      ]
     },
     {
       "id": "015",
