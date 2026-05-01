@@ -77,11 +77,26 @@
     {
       "id": "008",
       "name": "محمد السعيدي",
-      "profile_pic": "assets/images/008-mohammed-essaidi/profile.jpg",
+      "profile_pic": "assets/images/008-mohammed-essaidi/profile.png",
       "project": "مشروع مدينة الدريوش الذكية",
       "role": "مهندس التنقل والمواقف الذكية",
       "description": "تصميم نظام ذكي لإدارة حركة المرور ومواقف السيارات، مما يقلل من الازدحام ويوفر الوقت للسائقين.",
-      "gallery": []
+      "gallery": [
+        "assets/images/008-mohammed-essaidi/profile.png",
+        "assets/images/008-mohammed-essaidi/p1.jpg",
+        "assets/images/008-mohammed-essaidi/p2.jpg",
+        "assets/images/008-mohammed-essaidi/p3.jpg",
+        "assets/images/008-mohammed-essaidi/p4.jpg",
+        "assets/images/008-mohammed-essaidi/p5.jpg",
+        "assets/images/008-mohammed-essaidi/p6.jpg",
+        "assets/images/008-mohammed-essaidi/p7.jpg",
+        "assets/images/008-mohammed-essaidi/p8.jpg",
+        "assets/images/008-mohammed-essaidi/p9.jpg",
+        "assets/images/008-mohammed-essaidi/p10.jpg",
+        "assets/images/008-mohammed-essaidi/p11.jpg",
+        "assets/images/008-mohammed-essaidi/p12.jpg",
+        "assets/images/008-mohammed-essaidi/p13.jpg"
+      ]
     },
     {
       "id": "009",
