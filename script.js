@@ -2,6 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const studentId = urlParams.get('id');
 const photoEl = document.getElementById('student-photo');
+
 // 2. تحديد الأماكن في HTML اللي غادي نعمروها
 const nameEl = document.getElementById('student-name');
 const roleEl = document.getElementById('student-role');
@@ -34,7 +35,8 @@ async function loadStudentData() {
             roleEl.textContent = student.role;
             projectEl.textContent = student.project;
             descEl.textContent = student.description;
-            // --- الكود الجديد ديال الصورة الشخصية ---
+            
+            // --- الكود ديال الصورة الشخصية ---
             if (student.profile_pic) {
                 photoEl.src = student.profile_pic;
             } else {
@@ -50,6 +52,13 @@ async function loadStudentData() {
                     const img = document.createElement('img');
                     img.src = imgSrc;
                     img.alt = `صورة توثيقية لـ ${student.name}`;
+                    
+                    // --- الإضافة الجديدة: فتح الصورة عند الضغط عليها ---
+                    img.addEventListener('click', () => {
+                        openModal(imgSrc);
+                    });
+                    // ------------------------------------------------
+
                     galleryEl.appendChild(img);
                 });
             } else {
@@ -104,3 +113,39 @@ if(downloadBtn) {
         });
     });
 }
+
+// =========================================
+// 6. برمجة نافذة عرض الصور (Lightbox)
+// =========================================
+const modal = document.getElementById('image-modal');
+const modalImg = document.getElementById('expanded-img');
+const closeBtn = document.getElementsByClassName('close-modal')[0];
+
+// دالة فتح الصورة
+function openModal(imageSrc) {
+    if(modal && modalImg) {
+        modal.style.display = 'block';
+        modalImg.src = imageSrc;
+    }
+}
+
+// 1. الإغلاق عند الضغط على علامة X
+if(closeBtn) {
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+}
+
+// 2. الإغلاق عند الضغط في أي مكان فارغ (خارج الصورة)
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// 3. الإغلاق باستخدام زر Escape في لوحة المفاتيح
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape" && modal && modal.style.display === "block") {
+        modal.style.display = 'none';
+    }
+});
