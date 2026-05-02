@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>البطاقة المهنية - نادي الروبوتيك</title>
-    <!-- ربط خطوط Google Fonts (مثلا خط Tajawal زوين للعربية) -->
+    <!-- ربط خطوط Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="badge-container">
+        <!-- أزرار تغيير اللغة -->
+        <div class="lang-switcher">
+            <button onclick="changeLanguage('ar')" id="btn-ar" class="active">العربية</button>
+            <button onclick="changeLanguage('fr')" id="btn-fr">Français</button>
+            <button onclick="changeLanguage('en')" id="btn-en">English</button>
+        </div>
+        
         <!-- قسم رأس الصفحة (الهيدر) فيه الشعارات -->
         <header class="logos-header">
             <img src="assets/images/logos/school-logo.png" alt="شعار المؤسسة" class="logo school-logo">
@@ -33,7 +40,7 @@
 
         <!-- قسم الفكرة العامة -->
         <section class="info-section">
-            <div class="section-title">
+            <div class="section-title" id="title-idea">
                 <span class="icon">💡</span> الفكرة العامة للمشروع
             </div>
             <p id="project-desc">جاري تحميل البيانات...</p>
@@ -41,7 +48,7 @@
 
         <!-- قسم الصور التوثيقية -->
         <section class="gallery-section">
-            <div class="section-title">
+            <div class="section-title" id="title-gallery">
                 <span class="icon">📸</span> التوثيق الميداني
             </div>
             <div id="gallery-container" class="gallery-grid">
@@ -51,17 +58,20 @@
 
         <!-- تذييل الصفحة -->
         <footer class="badge-footer">
-            <p>نادي الروبوتيك والذكاء الاصطناعي - ثانوية الوحدة الإعدادية الرائدة</p>
+            <p id="footer-text">نادي الروبوتيك والذكاء الاصطناعي - ثانوية الوحدة الإعدادية الرائدة</p>
             <button id="download-pdf" class="btn-download">حفظ كملف PDF</button>
         </footer>
     </div>
+    
     <!-- مكتبة تحويل HTML إلى PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
     <!-- نافذة عرض الصور (Lightbox Modal) -->
     <div id="image-modal" class="modal">
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="expanded-img">
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

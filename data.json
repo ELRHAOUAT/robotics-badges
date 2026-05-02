@@ -2,65 +2,177 @@
     "students": [
         {
             "id": "001",
-            "name": "هبة التروكوتي",
+            "name": {
+                "ar": "هبة التروكوتي",
+                "fr": "Hiba Taroukouti",
+                "en": "Hiba Taroukouti"
+            },
             "profile_pic": "assets/profiles/001-hiba-taroukouti/profile.jpg",
-            "project": "مشروع الذراع الآلية والفرز الذكي",
-            "role": "مهندس الذراع الآلية والرؤية",
-            "description": "تطوير وبرمجة ذراع روبوتية قادرة على التعرف على الأشياء وفرزها بشكل دقيق باستخدام تقنيات الرؤية الحاسوبية.",
+            "project": {
+                "ar": "مشروع الذراع الآلية والفرز الذكي",
+                "fr": "Projet du Bras Robotique et Tri Intelligent",
+                "en": "Robotic Arm and Smart Sorting Project"
+            },
+            "role": {
+                "ar": "مهندس الذراع الآلية والرؤية",
+                "fr": "Ingénieur du Bras Robotique et Vision",
+                "en": "Robotic Arm and Vision Engineer"
+            },
+            "description": {
+                "ar": "تطوير وبرمجة ذراع روبوتية قادرة على التعرف على الأشياء وفرزها بشكل دقيق باستخدام تقنيات الرؤية الحاسوبية.",
+                "fr": "Développement et programmation d'un bras robotique capable de reconnaître et de trier des objets avec précision à l'aide de techniques de vision par ordinateur.",
+                "en": "Developing and programming a robotic arm capable of accurately recognizing and sorting objects using computer vision techniques."
+            },
             "gallery": []
         },
         {
             "id": "002",
-            "name": "الخرباوي خديجة",
+            "name": {
+                "ar": "الخرباوي خديجة",
+                "fr": "Khadija Kharbaoui",
+                "en": "Khadija Kharbaoui"
+            },
             "profile_pic": "assets/profiles/002-khadija-kharbaoui/profile.jpg",
-            "project": "مشروع الذراع الآلية والفرز الذكي",
-            "role": "مهندس المنصة الدوارة والانتباه",
-            "description": "تصميم منصة دوارة فعالة للروبوت مع دمج أنظمة انتباه لضمان استجابة سريعة ودقيقة للمتغيرات المحيطة.",
+            "project": {
+                "ar": "مشروع الذراع الآلية والفرز الذكي",
+                "fr": "Projet du Bras Robotique et Tri Intelligent",
+                "en": "Robotic Arm and Smart Sorting Project"
+            },
+            "role": {
+                "ar": "مهندس المنصة الدوارة والانتباه",
+                "fr": "Ingénieur de la Plateforme Tournante et de l'Attention",
+                "en": "Rotating Platform and Attention Engineer"
+            },
+            "description": {
+                "ar": "تصميم منصة دوارة فعالة للروبوت مع دمج أنظمة انتباه لضمان استجابة سريعة ودقيقة للمتغيرات المحيطة.",
+                "fr": "Conception d'une plateforme tournante efficace pour le robot, intégrant des systèmes d'attention pour assurer une réponse rapide et précise aux changements de l'environnement.",
+                "en": "Designing an efficient rotating platform for the robot, integrating attention systems to ensure quick and accurate responses to environmental changes."
+            },
             "gallery": []
         },
         {
             "id": "003",
-            "name": "هبة ملوكي",
+            "name": {
+                "ar": "هبة ملوكي",
+                "fr": "Hiba Mallouki",
+                "en": "Hiba Mallouki"
+            },
             "profile_pic": "assets/profiles/003-hiba-mallouki/profile.jpg",
-            "project": "مشروع السيارة المستكشفة الذكية",
-            "role": "مهندس الحركة والهيكل",
-            "description": "تصميم هيكل متين للسيارة المستكشفة وبرمجة أنظمة الحركة لضمان قدرتها على تجاوز العقبات والتنقل بسلاسة.",
+            "project": {
+                "ar": "مشروع السيارة المستكشفة الذكية",
+                "fr": "Projet de la Voiture Exploratrice Intelligente",
+                "en": "Smart Explorer Car Project"
+            },
+            "role": {
+                "ar": "مهندس الحركة والهيكل",
+                "fr": "Ingénieur Mouvement et Châssis",
+                "en": "Movement and Chassis Engineer"
+            },
+            "description": {
+                "ar": "تصميم هيكل متين للسيارة المستكشفة وبرمجة أنظمة الحركة لضمان قدرتها على تجاوز العقبات والتنقل بسلاسة.",
+                "fr": "Conception d'un châssis robuste pour la voiture exploratrice et programmation des systèmes de mouvement pour garantir sa capacité à surmonter les obstacles et à se déplacer en douceur.",
+                "en": "Designing a sturdy chassis for the explorer car and programming movement systems to ensure its ability to overcome obstacles and navigate smoothly."
+            },
             "gallery": []
         },
         {
             "id": "004",
-            "name": "رميسة اعراب",
+            "name": {
+                "ar": "رميسة اعراب",
+                "fr": "Romayssae Aarab",
+                "en": "Romayssae Aarab"
+            },
             "profile_pic": "assets/profiles/004-romayssae-aarab/profile.jpg",
-            "project": "مشروع السيارة المستكشفة الذكية",
-            "role": "مهندس الرؤية والاستكشاف",
-            "description": "تزويد السيارة بكاميرات وحساسات لجمع البيانات البصرية وتحليلها لاستكشاف البيئة المحيطة بذكاء.",
+            "project": {
+                "ar": "مشروع السيارة المستكشفة الذكية",
+                "fr": "Projet de la Voiture Exploratrice Intelligente",
+                "en": "Smart Explorer Car Project"
+            },
+            "role": {
+                "ar": "مهندس الرؤية والاستكشاف",
+                "fr": "Ingénieur Vision et Exploration",
+                "en": "Vision and Exploration Engineer"
+            },
+            "description": {
+                "ar": "تزويد السيارة بكاميرات وحساسات لجمع البيانات البصرية وتحليلها لاستكشاف البيئة المحيطة بذكاء.",
+                "fr": "Équiper la voiture de caméras et de capteurs pour collecter et analyser des données visuelles afin d'explorer intelligemment l'environnement.",
+                "en": "Equipping the car with cameras and sensors to collect and analyze visual data for smart environmental exploration."
+            },
             "gallery": []
         },
         {
             "id": "005",
-            "name": "محمد امين الصفياتي",
+            "name": {
+                "ar": "محمد امين الصفياتي",
+                "fr": "Mohammed Amine Safiati",
+                "en": "Mohammed Amine Safiati"
+            },
             "profile_pic": "assets/profiles/005-mohammed-amine-safiati/profile.jpg",
-            "project": "مشروع المركبة ذاتية القيادة وتتبع المسار",
-            "role": "مهندس الحركة وتتبع المسار",
-            "description": "تطوير خوارزميات للتحكم في حركة المركبة وتمكينها من تتبع مسارات محددة مسبقًا بدقة عالية.",
+            "project": {
+                "ar": "مشروع المركبة ذاتية القيادة وتتبع المسار",
+                "fr": "Projet du Véhicule Autonome et Suivi de Ligne",
+                "en": "Autonomous Vehicle and Line Tracking Project"
+            },
+            "role": {
+                "ar": "مهندس الحركة وتتبع المسار",
+                "fr": "Ingénieur Mouvement et Suivi de Ligne",
+                "en": "Movement and Line Tracking Engineer"
+            },
+            "description": {
+                "ar": "تطوير خوارزميات للتحكم في حركة المركبة وتمكينها من تتبع مسارات محددة مسبقًا بدقة عالية.",
+                "fr": "Développement d'algorithmes pour contrôler le mouvement du véhicule et lui permettre de suivre des itinéraires prédéfinis avec une grande précision.",
+                "en": "Developing algorithms to control the vehicle's movement and enable it to follow pre-defined paths with high precision."
+            },
             "gallery": []
         },
         {
             "id": "006",
-            "name": "لقمان العدوتي",
+            "name": {
+                "ar": "لقمان العدوتي",
+                "fr": "Lokmane Eladdouti",
+                "en": "Lokmane Eladdouti"
+            },
             "profile_pic": "assets/profiles/006-lokmane-eladdouti/profile.jpg",
-            "project": "مشروع المركبة ذاتية القيادة وتتبع المسار",
-            "role": "مهندس الرؤية والذكاء الملاحي",
-            "description": "برمجة نظام الملاحة الذكي للمركبة باستخدام تقنيات الذكاء الاصطناعي لتحليل مسارها واتخاذ القرارات.",
+            "project": {
+                "ar": "مشروع المركبة ذاتية القيادة وتتبع المسار",
+                "fr": "Projet du Véhicule Autonome et Suivi de Ligne",
+                "en": "Autonomous Vehicle and Line Tracking Project"
+            },
+            "role": {
+                "ar": "مهندس الرؤية والذكاء الملاحي",
+                "fr": "Ingénieur Vision et Intelligence de Navigation",
+                "en": "Vision and Navigation Intelligence Engineer"
+            },
+            "description": {
+                "ar": "برمجة نظام الملاحة الذكي للمركبة باستخدام تقنيات الذكاء الاصطناعي لتحليل مسارها واتخاذ القرارات.",
+                "fr": "Programmation du système de navigation intelligent du véhicule à l'aide de l'Intelligence Artificielle pour analyser sa trajectoire et prendre des décisions.",
+                "en": "Programming the vehicle's smart navigation system using Artificial Intelligence to analyze its path and make decisions."
+            },
             "gallery": []
         },
         {
             "id": "007",
-            "name": "اسراء العدوتي",
+            "name": {
+                "ar": "اسراء العدوتي",
+                "fr": "Israa Eladdouti",
+                "en": "Israa Eladdouti"
+            },
             "profile_pic": "assets/profiles/007-israa-eladdouti/profile.png",
-            "project": "مشروع مدينة الدريوش الذكية",
-            "role": "مهندس أنظمة السكن الذكي",
-            "description": "ابتكار وتطبيق حلول تقنية لتحسين كفاءة استهلاك الطاقة والراحة والأمان داخل المنازل في النموذج المصغر للمدينة.",
+            "project": {
+                "ar": "مشروع مدينة الدريوش الذكية",
+                "fr": "Projet de la Smart City Driouch",
+                "en": "Driouch Smart City Project"
+            },
+            "role": {
+                "ar": "مهندس أنظمة السكن الذكي",
+                "fr": "Ingénieur des Systèmes de Logement Intelligent",
+                "en": "Smart Housing Systems Engineer"
+            },
+            "description": {
+                "ar": "ابتكار وتطبيق حلول تقنية لتحسين كفاءة استهلاك الطاقة والراحة والأمان داخل المنازل في النموذج المصغر للمدينة.",
+                "fr": "Innover et appliquer des solutions techniques pour améliorer l'efficacité énergétique, le confort et la sécurité des maisons dans le modèle miniature de la ville.",
+                "en": "Innovating and applying technical solutions to improve energy efficiency, comfort, and security inside homes in the miniature city model."
+            },
             "gallery": [
                 "assets/images/007-israa-eladdouti/p1.jpg",
                 "assets/images/007-israa-eladdouti/p2.jpg",
@@ -76,11 +188,27 @@
         },
         {
             "id": "008",
-            "name": "محمد السعيدي",
+            "name": {
+                "ar": "محمد السعيدي",
+                "fr": "Mohammed Essaidi",
+                "en": "Mohammed Essaidi"
+            },
             "profile_pic": "assets/profiles/008-mohammed-essaidi/profile.png",
-            "project": "مشروع مدينة الدريوش الذكية",
-            "role": "مهندس التنقل والمواقف الذكية",
-            "description": "تصميم نظام ذكي لإدارة حركة المرور ومواقف السيارات، مما يقلل من الازدحام ويوفر الوقت للسائقين.",
+            "project": {
+                "ar": "مشروع مدينة الدريوش الذكية",
+                "fr": "Projet de la Smart City Driouch",
+                "en": "Driouch Smart City Project"
+            },
+            "role": {
+                "ar": "مهندس التنقل والمواقف الذكية",
+                "fr": "Ingénieur Mobilité et Parking Intelligent",
+                "en": "Smart Mobility and Parking Engineer"
+            },
+            "description": {
+                "ar": "تصميم نظام ذكي لإدارة حركة المرور ومواقف السيارات، مما يقلل من الازدحام ويوفر الوقت للسائقين.",
+                "fr": "Conception d'un système intelligent pour gérer la circulation et le stationnement, réduisant les embouteillages et faisant gagner du temps aux conducteurs.",
+                "en": "Designing a smart system to manage traffic and parking, reducing congestion and saving time for drivers."
+            },
             "gallery": [
                 "assets/images/008-mohammed-essaidi/p1.jpg",
                 "assets/images/008-mohammed-essaidi/p2.jpg",
@@ -99,11 +227,27 @@
         },
         {
             "id": "009",
-            "name": "حفصة بوفعريرا",
+            "name": {
+                "ar": "حفصة بوفعريرا",
+                "fr": "Hafsa Boufarira",
+                "en": "Hafsa Boufarira"
+            },
             "profile_pic": "assets/profiles/009-hafsa-boufarira/profile.png",
-            "project": "مشروع مدينة الدريوش الذكية",
-            "role": "تقني الإنارة والخدمات الحضرية",
-            "description": "تطوير شبكة إنارة ذكية تتكيف مع التغيرات البيئية وتحسين إدارة الخدمات الحضرية لترشيد الاستهلاك.",
+            "project": {
+                "ar": "مشروع مدينة الدريوش الذكية",
+                "fr": "Projet de la Smart City Driouch",
+                "en": "Driouch Smart City Project"
+            },
+            "role": {
+                "ar": "تقني الإنارة والخدمات الحضرية",
+                "fr": "Technicien Éclairage et Services Urbains",
+                "en": "Lighting and Urban Services Technician"
+            },
+            "description": {
+                "ar": "تطوير شبكة إنارة ذكية تتكيف مع التغيرات البيئية وتحسين إدارة الخدمات الحضرية لترشيد الاستهلاك.",
+                "fr": "Développement d'un réseau d'éclairage intelligent adapté aux changements environnementaux et amélioration de la gestion des services urbains pour optimiser la consommation.",
+                "en": "Developing a smart lighting network adapting to environmental changes and improving urban services management to optimize consumption."
+            },
             "gallery": [
                 "assets/images/009-hafsa-boufarira/p1.jpg",
                 "assets/images/009-hafsa-boufarira/p2.jpg",
@@ -126,47 +270,127 @@
         },
         {
             "id": "010",
-            "name": "بشرى حيدة",
+            "name": {
+                "ar": "بشرى حيدة",
+                "fr": "Bouchra Haida",
+                "en": "Bouchra Haida"
+            },
             "profile_pic": "assets/profiles/010-bouchra-haida/profile.jpg",
-            "project": "مشروع مدينة الدريوش الذكية",
-            "role": "أخصائي البيئة والزراعة الذكية",
-            "description": "دمج حلول زراعية ذكية لزيادة المساحات الخضراء ومراقبة جودة الهواء لضمان بيئة صحية ومستدامة.",
+            "project": {
+                "ar": "مشروع مدينة الدريوش الذكية",
+                "fr": "Projet de la Smart City Driouch",
+                "en": "Driouch Smart City Project"
+            },
+            "role": {
+                "ar": "أخصائي البيئة والزراعة الذكية",
+                "fr": "Spécialiste Environnement et Agriculture Intelligente",
+                "en": "Smart Agriculture and Environment Specialist"
+            },
+            "description": {
+                "ar": "دمج حلول زراعية ذكية لزيادة المساحات الخضراء ومراقبة جودة الهواء لضمان بيئة صحية ومستدامة.",
+                "fr": "Intégration de solutions agricoles intelligentes pour augmenter les espaces verts et surveiller la qualité de l'air afin de garantir un environnement sain et durable.",
+                "en": "Integrating smart agricultural solutions to increase green spaces and monitor air quality to ensure a healthy and sustainable environment."
+            },
             "gallery": []
         },
         {
             "id": "011",
-            "name": "وئام اليشاوي",
+            "name": {
+                "ar": "وئام اليشاوي",
+                "fr": "Wiam Elyachaoui",
+                "en": "Wiam Elyachaoui"
+            },
             "profile_pic": "assets/profiles/011-wiam-elyachaoui/profile.jpg",
-            "project": "مشروع مدينة الدريوش الذكية",
-            "role": "مهندس الوقاية من المخاطر",
-            "description": "تصميم أنظمة إنذار مبكر واستجابة ذكية للوقاية من الحرائق والكوارث المحتملة داخل المدينة.",
+            "project": {
+                "ar": "مشروع مدينة الدريوش الذكية",
+                "fr": "Projet de la Smart City Driouch",
+                "en": "Driouch Smart City Project"
+            },
+            "role": {
+                "ar": "مهندس الوقاية من المخاطر",
+                "fr": "Ingénieur Prévention des Risques",
+                "en": "Risk Prevention Engineer"
+            },
+            "description": {
+                "ar": "تصميم أنظمة إنذار مبكر واستجابة ذكية للوقاية من الحرائق والكوارث المحتملة داخل المدينة.",
+                "fr": "Conception de systèmes d'alerte précoce et de réponse intelligente pour prévenir les incendies et les catastrophes potentielles au sein de la ville.",
+                "en": "Designing early warning and smart response systems to prevent potential fires and disasters within the city."
+            },
             "gallery": []
         },
         {
             "id": "012",
-            "name": "فاطمة الزهراء بوصوفي",
+            "name": {
+                "ar": "فاطمة الزهراء بوصوفي",
+                "fr": "Fatima Zahra Boussoufi",
+                "en": "Fatima Zahra Boussoufi"
+            },
             "profile_pic": "assets/profiles/012-fatima-zahra-boussoufi/profile.jpg",
-            "project": "مشروع مدينة الدريوش الذكية",
-            "role": "مهندس إدارة الفيضانات والقناطر",
-            "description": "تطوير أنظمة لمراقبة مستويات المياه وتصريفها للوقاية من أضرار الفيضانات، وتأمين سلامة القناطر.",
+            "project": {
+                "ar": "مشروع مدينة الدريوش الذكية",
+                "fr": "Projet de la Smart City Driouch",
+                "en": "Driouch Smart City Project"
+            },
+            "role": {
+                "ar": "مهندس إدارة الفيضانات والقناطر",
+                "fr": "Ingénieur Gestion des Inondations et Ponts",
+                "en": "Flood Management and Bridges Engineer"
+            },
+            "description": {
+                "ar": "تطوير أنظمة لمراقبة مستويات المياه وتصريفها للوقاية من أضرار الفيضانات، وتأمين سلامة القناطر.",
+                "fr": "Développement de systèmes pour surveiller les niveaux d'eau et le drainage afin de prévenir les dommages liés aux inondations et d'assurer la sécurité des ponts.",
+                "en": "Developing systems to monitor water levels and drainage to prevent flood damage and secure bridges."
+            },
             "gallery": []
         },
         {
             "id": "013",
-            "name": "انس حطيط",
+            "name": {
+                "ar": "انس حطيط",
+                "fr": "Anass Hattit",
+                "en": "Anass Hattit"
+            },
             "profile_pic": "assets/profiles/013-anass-hattit/profile.jpg",
-            "project": "مشروع مدينة الدريوش الذكية",
-            "role": "مصمم المعالم والبناء التقني",
-            "description": "تصميم المجسمات والمعالم البارزة للمدينة الذكية باستخدام تقنيات الطباعة ثلاثية الأبعاد والمواد المبتكرة.",
+            "project": {
+                "ar": "مشروع مدينة الدريوش الذكية",
+                "fr": "Projet de la Smart City Driouch",
+                "en": "Driouch Smart City Project"
+            },
+            "role": {
+                "ar": "مصمم المعالم والبناء التقني",
+                "fr": "Concepteur de Monuments et Construction Technique",
+                "en": "Landmark Designer and Technical Builder"
+            },
+            "description": {
+                "ar": "تصميم المجسمات والمعالم البارزة للمدينة الذكية باستخدام تقنيات الطباعة ثلاثية الأبعاد والمواد المبتكرة.",
+                "fr": "Conception de maquettes et monuments emblématiques pour la ville intelligente à l'aide de techniques d'impression 3D et de matériaux innovants.",
+                "en": "Designing models and prominent landmarks for the smart city using 3D printing techniques and innovative materials."
+            },
             "gallery": []
         },
         {
             "id": "014",
-            "name": "هشام اوسرود",
+            "name": {
+                "ar": "هشام اوسرود",
+                "fr": "Hicham Ousroud",
+                "en": "Hicham Ousroud"
+            },
             "profile_pic": "assets/profiles/014-hicham-ousroud/profile.png",
-            "project": "مشروع مدينة الدريوش الذكية",
-            "role": "مطور النظم والذكاء الاصطناعي",
-            "description": "ربط مختلف أنظمة المدينة بمنصة مركزية تعتمد على الذكاء الاصطناعي لتحليل البيانات وإدارتها بفعالية.",
+            "project": {
+                "ar": "مشروع مدينة الدريوش الذكية",
+                "fr": "Projet de la Smart City Driouch",
+                "en": "Driouch Smart City Project"
+            },
+            "role": {
+                "ar": "مطور النظم والذكاء الاصطناعي",
+                "fr": "Développeur Systèmes et Intelligence Artificielle",
+                "en": "Systems and Artificial Intelligence Developer"
+            },
+            "description": {
+                "ar": "ربط مختلف أنظمة المدينة بمنصة مركزية تعتمد على الذكاء الاصطناعي لتحليل البيانات وإدارتها بفعالية.",
+                "fr": "Connecter divers systèmes de la ville à une plateforme centrale basée sur l'Intelligence Artificielle pour analyser et gérer efficacement les données.",
+                "en": "Connecting various city systems to a central AI-based platform to analyze and manage data effectively."
+            },
             "gallery": [
                 "assets/images/014-hicham-ousroud/p1.jpg",
                 "assets/images/014-hicham-ousroud/p2.jpg",
@@ -184,56 +408,152 @@
         },
         {
             "id": "015",
-            "name": "ادم احويض",
+            "name": {
+                "ar": "ادم احويض",
+                "fr": "Adam Ahwaid",
+                "en": "Adam Ahwaid"
+            },
             "profile_pic": "assets/profiles/015-adam-ahwaid/profile.jpg",
-            "project": "مشروع جرس مؤسسة الوحدة الذكي وحارس السلامة",
-            "role": "مهندس الوقت والجرس",
-            "description": "برمجة نظام جرس مدرسي ذكي ومؤتمت بالكامل لضبط الحصص الدراسية بدقة وتخفيف العبء الإداري.",
+            "project": {
+                "ar": "مشروع جرس مؤسسة الوحدة الذكي وحارس السلامة",
+                "fr": "Projet de Sonnette Intelligente et Gardien de Sécurité de l'École Al Wahda",
+                "en": "Al Wahda School Smart Bell and Safety Guard Project"
+            },
+            "role": {
+                "ar": "مهندس الوقت والجرس",
+                "fr": "Ingénieur Temps et Sonnerie",
+                "en": "Time and Bell Engineer"
+            },
+            "description": {
+                "ar": "برمجة نظام جرس مدرسي ذكي ومؤتمت بالكامل لضبط الحصص الدراسية بدقة وتخفيف العبء الإداري.",
+                "fr": "Programmation d'un système de sonnerie scolaire intelligent et entièrement automatisé pour gérer avec précision les horaires de cours et réduire la charge administrative.",
+                "en": "Programming a fully automated smart school bell system to accurately manage class schedules and reduce administrative burden."
+            },
             "gallery": []
         },
         {
             "id": "016",
-            "name": "سلمى اقجوع",
+            "name": {
+                "ar": "سلمى اقجوع",
+                "fr": "Salma Akjoua",
+                "en": "Salma Akjoua"
+            },
             "profile_pic": "assets/profiles/016-salma-akjoua/profile.jpg",
-            "project": "مشروع جرس مؤسسة الوحدة الذكي وحارس السلامة",
-            "role": "مهندس السلامة وبناء المؤسسة",
-            "description": "تجهيز نظام الجرس بحساسات وبروتوكولات لضمان سلامة الطلاب أثناء فترات الاستراحة والدخول والخروج.",
+            "project": {
+                "ar": "مشروع جرس مؤسسة الوحدة الذكي وحارس السلامة",
+                "fr": "Projet de Sonnette Intelligente et Gardien de Sécurité de l'École Al Wahda",
+                "en": "Al Wahda School Smart Bell and Safety Guard Project"
+            },
+            "role": {
+                "ar": "مهندس السلامة وبناء المؤسسة",
+                "fr": "Ingénieur Sécurité et Construction de l'École",
+                "en": "School Construction and Safety Engineer"
+            },
+            "description": {
+                "ar": "تجهيز نظام الجرس بحساسات وبروتوكولات لضمان سلامة الطلاب أثناء فترات الاستراحة والدخول والخروج.",
+                "fr": "Équiper le système de sonnerie de capteurs et de protocoles pour assurer la sécurité des élèves pendant les pauses, les entrées et les sorties.",
+                "en": "Equipping the bell system with sensors and protocols to ensure student safety during breaks, entry, and exit."
+            },
             "gallery": []
         },
         {
             "id": "017",
-            "name": "محمد امين زكاغ",
+            "name": {
+                "ar": "محمد امين زكاغ",
+                "fr": "Mohammed Amine Zegagh",
+                "en": "Mohammed Amine Zegagh"
+            },
             "profile_pic": "assets/profiles/017-mohammed-amine-zegagh/profile.jpg",
-            "project": "مشروع مزرعتنا الذكية",
-            "role": "مهندس الري",
-            "description": "تصميم نظام ري آلي ذكي يعتمد على قياس رطوبة التربة لتوفير المياه وتحسين إنتاجية المحاصيل.",
+            "project": {
+                "ar": "مشروع مزرعتنا الذكية",
+                "fr": "Projet de Notre Ferme Intelligente",
+                "en": "Our Smart Farm Project"
+            },
+            "role": {
+                "ar": "مهندس الري",
+                "fr": "Ingénieur Irrigation",
+                "en": "Irrigation Engineer"
+            },
+            "description": {
+                "ar": "تصميم نظام ري آلي ذكي يعتمد على قياس رطوبة التربة لتوفير المياه وتحسين إنتاجية المحاصيل.",
+                "fr": "Conception d'un système d'irrigation automatisé et intelligent basé sur la mesure de l'humidité du sol pour économiser l'eau et améliorer le rendement des cultures.",
+                "en": "Designing a smart automated irrigation system based on soil moisture measurement to save water and improve crop yield."
+            },
             "gallery": []
         },
         {
             "id": "018",
-            "name": "داود اعراب",
+            "name": {
+                "ar": "داود اعراب",
+                "fr": "Daoud Aarab",
+                "en": "Daoud Aarab"
+            },
             "profile_pic": "assets/profiles/018-daoud-aarab/profile.jpg",
-            "project": "مشروع مزرعتنا الذكية",
-            "role": "مهندس الطاقة والبناء",
-            "description": "تجهيز المزرعة بأنظمة طاقة متجددة لضمان استقلاليتها الطاقية وبناء هياكل صديقة للبيئة.",
+            "project": {
+                "ar": "مشروع مزرعتنا الذكية",
+                "fr": "Projet de Notre Ferme Intelligente",
+                "en": "Our Smart Farm Project"
+            },
+            "role": {
+                "ar": "مهندس الطاقة والبناء",
+                "fr": "Ingénieur Énergie et Construction",
+                "en": "Energy and Construction Engineer"
+            },
+            "description": {
+                "ar": "تجهيز المزرعة بأنظمة طاقة متجددة لضمان استقلاليتها الطاقية وبناء هياكل صديقة للبيئة.",
+                "fr": "Équiper la ferme de systèmes d'énergie renouvelable pour garantir son indépendance énergétique et construire des structures respectueuses de l'environnement.",
+                "en": "Equipping the farm with renewable energy systems to ensure its energy independence and building eco-friendly structures."
+            },
             "gallery": []
         },
         {
             "id": "019",
-            "name": "كوثر الزعيم",
+            "name": {
+                "ar": "كوثر الزعيم",
+                "fr": "Kaoutar Zaim",
+                "en": "Kaoutar Zaim"
+            },
             "profile_pic": "assets/profiles/019-kaoutar-zaim/profile.jpg",
-            "project": "مشروع نظام الخوذة الذكية وبروتوكول حماية الدراجين",
-            "role": "مهندس الاستشعار الحيوي والوقاية",
-            "description": "دمج حساسات في الخوذة لمراقبة العلامات الحيوية للسائق والتأكد من ارتدائها قبل السماح بتشغيل الدراجة.",
+            "project": {
+                "ar": "مشروع نظام الخوذة الذكية وبروتوكول حماية الدراجين",
+                "fr": "Projet de Casque Intelligent et Protocole de Protection des Cyclistes",
+                "en": "Smart Helmet and Cyclist Protection Protocol Project"
+            },
+            "role": {
+                "ar": "مهندس الاستشعار الحيوي والوقاية",
+                "fr": "Ingénieur Biocapteurs et Prévention",
+                "en": "Biosensing and Prevention Engineer"
+            },
+            "description": {
+                "ar": "دمج حساسات في الخوذة لمراقبة العلامات الحيوية للسائق والتأكد من ارتدائها قبل السماح بتشغيل الدراجة.",
+                "fr": "Intégration de capteurs dans le casque pour surveiller les signes vitaux du conducteur et s'assurer qu'il est bien porté avant d'autoriser le démarrage de la moto.",
+                "en": "Integrating sensors into the helmet to monitor the rider's vital signs and ensure it's worn before allowing the motorcycle to start."
+            },
             "gallery": []
         },
         {
             "id": "020",
-            "name": "فاطمة المعناوي",
+            "name": {
+                "ar": "فاطمة المعناوي",
+                "fr": "Fatima Maanaoui",
+                "en": "Fatima Maanaoui"
+            },
             "profile_pic": "assets/profiles/020-fatima-maanaoui/profile.jpg",
-            "project": "مشروع نظام الخوذة الذكية وبروتوكول حماية الدراجين",
-            "role": "مهندس التحكم والربط اللاسلكي",
-            "description": "برمجة أنظمة الاتصال اللاسلكي بين الخوذة والدراجة لتبادل البيانات وتفعيل بروتوكولات الحماية عند الضرورة.",
+            "project": {
+                "ar": "مشروع نظام الخوذة الذكية وبروتوكول حماية الدراجين",
+                "fr": "Projet de Casque Intelligent et Protocole de Protection des Cyclistes",
+                "en": "Smart Helmet and Cyclist Protection Protocol Project"
+            },
+            "role": {
+                "ar": "مهندس التحكم والربط اللاسلكي",
+                "fr": "Ingénieur Contrôle et Connexion Sans Fil",
+                "en": "Wireless Connection and Control Engineer"
+            },
+            "description": {
+                "ar": "برمجة أنظمة الاتصال اللاسلكي بين الخوذة والدراجة لتبادل البيانات وتفعيل بروتوكولات الحماية عند الضرورة.",
+                "fr": "Programmation de systèmes de communication sans fil entre le casque et la moto pour échanger des données et activer les protocoles de protection si nécessaire.",
+                "en": "Programming wireless communication systems between the helmet and the motorcycle to exchange data and activate protection protocols when necessary."
+            },
             "gallery": []
         }
     ]

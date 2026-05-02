@@ -266,3 +266,47 @@ body {
     from {transform: scale(0.8); opacity: 0;}
     to {transform: scale(1); opacity: 1;}
 }
+/* =========================================
+   تنسيق أزرار تغيير اللغة والاتجاه
+========================================= */
+.lang-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.lang-switcher button {
+    padding: 5px 15px;
+    border: 1.5px solid #21a1d3;
+    background-color: transparent;
+    color: #0f1c46;
+    border-radius: 20px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.lang-switcher button:hover,
+.lang-switcher button.active {
+    background-color: #21a1d3;
+    color: #ffffff;
+}
+
+/* تنسيقات خاصة باللغات الأجنبية (من اليسار لليمين) */
+body[dir="ltr"] {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+
+body[dir="ltr"] .badge-container {
+    direction: ltr;
+}
+
+body[dir="ltr"] .role-badge {
+    /* تعديل بسيط للبادج ديال الدور باش يجي مقاد فاليسار */
+    display: inline-block;
+}

@@ -1,20 +1,77 @@
-// 1. جلب المعرف (ID) من رابط الصفحة
+// 1. إعدادات اللغة الافتراضية
+let currentLang = 'ar';
+
+// قاموس الكلمات الثابتة في الموقع
+const translations = {
+    ar: {
+        idea: "الفكرة العامة للمشروع 💡",
+        gallery: "التوثيق الميداني 📸",
+        notFound: "مهندس غير موجود",
+        notFoundDesc: "لم يتم العثور على بيانات هذا المهندس في قاعدة البيانات.",
+        error: "حدث خطأ أثناء تحميل البيانات.",
+        noImages: "لم يتم إضافة صور توثيقية ميدانية بعد.",
+        download: "حفظ كملف PDF"
+    },
+    fr: {
+        idea: "Idée Générale du Projet 💡",
+        gallery: "Documentation sur le Terrain 📸",
+        notFound: "Ingénieur introuvable",
+        notFoundDesc: "Les données de cet ingénieur n'ont pas été trouvées.",
+        error: "Erreur de chargement des données.",
+        noImages: "Aucune photo sur le terrain n'a encore été ajoutée.",
+        download: "Télécharger en PDF"
+    },
+    en: {
+        idea: "General Project Idea 💡",
+        gallery: "Field Documentation 📸",
+        notFound: "Engineer not found",
+        notFoundDesc: "Data for this engineer was not found.",
+        error: "Error loading data.",
+        noImages: "No field photos have been added yet.",
+        download: "Download as PDF"
+    }
+};
+
+// 2. جلب المعرف (ID) من رابط الصفحة
 const urlParams = new URLSearchParams(window.location.search);
 const studentId = urlParams.get('id');
 const photoEl = document.getElementById('student-photo');
-
-// 2. تحديد الأماكن في HTML اللي غادي نعمروها
 const nameEl = document.getElementById('student-name');
 const roleEl = document.getElementById('student-role');
 const projectEl = document.getElementById('project-name');
 const descEl = document.getElementById('project-desc');
 const galleryEl = document.getElementById('gallery-container');
 
+// دالة تغيير اللغة
+function changeLanguage(lang) {
+    currentLang = lang;
+
+    // تغيير لون الزر النشط
+    document.querySelectorAll('.lang-switcher button').forEach(btn => btn.classList.remove('active'));
+    if(document.getElementById('btn-' + lang)) {
+        document.getElementById('btn-' + lang).classList.add('active');
+    }
+
+    // تغيير اتجاه الصفحة (RTL / LTR)
+    if (lang === 'ar') {
+        document.body.setAttribute('dir', 'rtl');
+    } else {
+        document.body.setAttribute('dir', 'ltr');
+    }
+
+    // ترجمة النصوص الثابتة
+    if(document.getElementById('title-idea')) document.getElementById('title-idea').innerHTML = translations[lang].idea;
+    if(document.getElementById('title-gallery')) document.getElementById('title-gallery').innerHTML = translations[lang].gallery;
+    if(document.getElementById('download-pdf')) document.getElementById('download-pdf').innerHTML = translations[lang].download;
+
+    // إعادة تحميل بيانات التلميذ باش تترجم حتى هي
+    loadStudentData();
+}
+
 // 3. الدالة الرئيسية لجلب البيانات وعرضها
 async function loadStudentData() {
-    // التأكد من أن الرابط فيه ID
     if (!studentId) {
-        nameEl.textContent = "خطأ: لم يتم تحديد المهندس";
+        nameEl.textContent = translations[currentLang].error;
         descEl.textContent = "يرجى التأكد من مسح رمز الاستجابة السريعة (QR Code) الصحيح.";
         projectEl.textContent = "---";
         roleEl.textContent = "---";
@@ -22,98 +79,83 @@ async function loadStudentData() {
     }
 
     try {
-        // جلب البيانات من ملف JSON
         const response = await fetch('data.json');
         const data = await response.json();
-
-        // البحث عن التلميذ اللي عندو نفس الـ ID
         const student = data.students.find(s => s.id === studentId);
 
         if (student) {
-            // إذا لقينا التلميذ، كنعمروا المعلومات ديالو
-            nameEl.textContent = student.name;
-            roleEl.textContent = student.role;
-            projectEl.textContent = student.project;
-            descEl.textContent = student.description;
+            // التحقق الذكي: إذا كانت القيمة عبارة عن كائن (Object) فيه لغات، نجلب اللغة الحالية، وإلا نعرض النص كما هو (عربي)
+            nameEl.textContent = typeof student.name === 'object' ? student.name[currentLang] : student.name;
+            roleEl.textContent = typeof student.role === 'object' ? student.role[currentLang] : student.role;
+            projectEl.textContent = typeof student.project === 'object' ? student.project[currentLang] : student.project;
+            descEl.textContent = typeof student.description === 'object' ? student.description[currentLang] : student.description;
             
-            // --- الكود ديال الصورة الشخصية ---
             if (student.profile_pic) {
                 photoEl.src = student.profile_pic;
             } else {
-                // إلى نسينا ما درناش تصويرة، تقدر دير صورة افتراضية (Avatar خاوي)
                 photoEl.src = 'assets/images/default-avatar.png'; 
             }
 
-            // تفريغ مكان الصور القديمة وتعبئته بالصور الجديدة
             galleryEl.innerHTML = ''; 
             
             if (student.gallery && student.gallery.length > 0) {
                 student.gallery.forEach(imgSrc => {
                     const img = document.createElement('img');
                     img.src = imgSrc;
-                    img.alt = `صورة توثيقية لـ ${student.name}`;
-
-                    // --- إضافة لتسريع التحميل ---
-                    img.loading = 'lazy'; 
-                    // -----------------------------
+                    img.loading = 'lazy';
+                    img.alt = `صورة توثيقية`;
                     
-                    // --- الإضافة الجديدة: فتح الصورة عند الضغط عليها ---
                     img.addEventListener('click', () => {
                         openModal(imgSrc);
                     });
-                    // ------------------------------------------------
 
                     galleryEl.appendChild(img);
                 });
             } else {
-                // إذا ماكانوش الصور
-                galleryEl.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #999; font-size: 0.9rem;">لم يتم إضافة صور توثيقية ميدانية بعد.</p>';
+                galleryEl.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: #999; font-size: 0.9rem;">${translations[currentLang].noImages}</p>`;
             }
         } else {
-            // إذا كان الـ ID غالط أو مامسجلش
-            nameEl.textContent = "مهندس غير موجود";
-            descEl.textContent = "لم يتم العثور على بيانات هذا المهندس في قاعدة البيانات.";
+            nameEl.textContent = translations[currentLang].notFound;
+            descEl.textContent = translations[currentLang].notFoundDesc;
             projectEl.textContent = "---";
             roleEl.textContent = "---";
         }
     } catch (error) {
-        console.error("خطأ في جلب البيانات:", error);
-        descEl.textContent = "حدث خطأ أثناء تحميل البيانات. المرجو المحاولة لاحقاً.";
+        console.error("خطأ:", error);
+        descEl.textContent = translations[currentLang].error;
     }
 }
 
-// 4. تشغيل الدالة مباشرة بعد تحميل الصفحة
-window.addEventListener('DOMContentLoaded', loadStudentData);
+window.addEventListener('DOMContentLoaded', () => {
+    changeLanguage('ar'); // تفعيل العربية كافتراضية عند فتح الصفحة
+});
 
 // =========================================
 // 5. برمجة زر تحميل PDF
 // =========================================
 const downloadBtn = document.getElementById('download-pdf');
-
 if(downloadBtn) {
     downloadBtn.addEventListener('click', () => {
-        // 1. تحديد العنصر اللي بغينا نحولوه لـ PDF (الحاوية ديال البادج كاملة)
         const badgeElement = document.querySelector('.badge-container');
-
-        // 2. إخفاء زر التحميل مؤقتاً باش مايبانش مطبوع داخل الـ PDF
         downloadBtn.style.display = 'none';
+        
+        // إخفاء أزرار اللغة قبل الطباعة
+        const langSwitcher = document.querySelector('.lang-switcher');
+        if(langSwitcher) langSwitcher.style.display = 'none';
 
-        // 3. جلب اسم المهندس باش نسميو بيه ملف الـ PDF أوتوماتيكياً
         const studentNameForFile = nameEl.textContent !== '--' ? nameEl.textContent : 'مهندس';
         
-        // 4. إعدادات استخراج الـ PDF
         const opt = {
-            margin:       0.2, // هامش صغير باش مايجيش مقطوع
-            filename:     `البطاقة-المهنية-${studentNameForFile}.pdf`, // سمية الملف
+            margin:       0.2,
+            filename:     `البطاقة-المهنية-${studentNameForFile}.pdf`,
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true }, // scale 2 كترفع الجودة، و useCORS باش يقرا الصور بشكل صحيح
-            jsPDF:        { unit: 'in', format: 'a5', orientation: 'portrait' } // استعملنا قياس A5 حيت البادج عمودي
+            html2canvas:  { scale: 2, useCORS: true },
+            jsPDF:        { unit: 'in', format: 'a5', orientation: 'portrait' }
         };
 
-        // 5. عملية التوليد والتحميل
         html2pdf().set(opt).from(badgeElement).save().then(() => {
-            // 6. من بعد ما يكمل التحميل، كنرجعو الزر يبان فالموقع
             downloadBtn.style.display = 'block';
+            if(langSwitcher) langSwitcher.style.display = 'flex'; // إرجاع أزرار اللغة بعد التحميل
         });
     });
 }
@@ -125,7 +167,6 @@ const modal = document.getElementById('image-modal');
 const modalImg = document.getElementById('expanded-img');
 const closeBtn = document.getElementsByClassName('close-modal')[0];
 
-// دالة فتح الصورة
 function openModal(imageSrc) {
     if(modal && modalImg) {
         modal.style.display = 'block';
@@ -133,21 +174,18 @@ function openModal(imageSrc) {
     }
 }
 
-// 1. الإغلاق عند الضغط على علامة X
 if(closeBtn) {
     closeBtn.onclick = function() {
         modal.style.display = 'none';
     }
 }
 
-// 2. الإغلاق عند الضغط في أي مكان فارغ (خارج الصورة)
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = 'none';
     }
 }
 
-// 3. الإغلاق باستخدام زر Escape في لوحة المفاتيح
 document.addEventListener('keydown', function(event) {
     if (event.key === "Escape" && modal && modal.style.display === "block") {
         modal.style.display = 'none';
