@@ -52,6 +52,10 @@ async function loadStudentData() {
                     const img = document.createElement('img');
                     img.src = imgSrc;
                     img.alt = `صورة توثيقية لـ ${student.name}`;
+
+                    // --- إضافة لتسريع التحميل ---
+                    img.loading = 'lazy'; 
+                    // -----------------------------
                     
                     // --- الإضافة الجديدة: فتح الصورة عند الضغط عليها ---
                     img.addEventListener('click', () => {
