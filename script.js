@@ -84,7 +84,7 @@ async function loadStudentData() {
         const student = data.students.find(s => s.id === studentId);
 
         if (student) {
-            // التحقق الذكي: إذا كانت القيمة عبارة عن كائن (Object) فيه لغات، نجلب اللغة الحالية، وإلا نعرض النص كما هو (عربي)
+            // التحقق الذكي للغات
             nameEl.textContent = typeof student.name === 'object' ? student.name[currentLang] : student.name;
             roleEl.textContent = typeof student.role === 'object' ? student.role[currentLang] : student.role;
             projectEl.textContent = typeof student.project === 'object' ? student.project[currentLang] : student.project;
@@ -99,14 +99,16 @@ async function loadStudentData() {
             galleryEl.innerHTML = ''; 
             
             if (student.gallery && student.gallery.length > 0) {
-                student.gallery.forEach(imgSrc => {
+                // --- التعديل هنا: زدنا index فالفور إيتش ---
+                student.gallery.forEach((imgSrc, index) => {
                     const img = document.createElement('img');
                     img.src = imgSrc;
                     img.loading = 'lazy';
                     img.alt = `صورة توثيقية`;
                     
+                    // --- التعديل هنا: كنصيفطو المصفوفة كاملة ورقم الصورة ---
                     img.addEventListener('click', () => {
-                        openModal(imgSrc);
+                        openModal(student.gallery, index);
                     });
 
                     galleryEl.appendChild(img);
@@ -127,7 +129,7 @@ async function loadStudentData() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    changeLanguage('ar'); // تفعيل العربية كافتراضية عند فتح الصفحة
+    changeLanguage('ar'); // تفعيل العربية كافتراضية
 });
 
 // =========================================
@@ -155,39 +157,90 @@ if(downloadBtn) {
 
         html2pdf().set(opt).from(badgeElement).save().then(() => {
             downloadBtn.style.display = 'block';
-            if(langSwitcher) langSwitcher.style.display = 'flex'; // إرجاع أزرار اللغة بعد التحميل
+            if(langSwitcher) langSwitcher.style.display = 'flex'; 
         });
     });
 }
 
 // =========================================
-// 6. برمجة نافذة عرض الصور (Lightbox)
+// 6. برمجة نافذة عرض الصور (Lightbox & Navigation)
 // =========================================
 const modal = document.getElementById('image-modal');
 const modalImg = document.getElementById('expanded-img');
 const closeBtn = document.getElementsByClassName('close-modal')[0];
 
-function openModal(imageSrc) {
-    if(modal && modalImg) {
+// متغيرات لتتبع الصور
+let currentGalleryArray = [];
+let currentImageIndex = 0;
+
+// دالة فتح الصورة المعدلة
+function openModal(galleryArray, index) {
+    if(modal && modalImg && galleryArray.length > 0) {
+        currentGalleryArray = galleryArray;
+        currentImageIndex = index;
         modal.style.display = 'block';
-        modalImg.src = imageSrc;
+        modalImg.src = currentGalleryArray[currentImageIndex];
     }
 }
 
-if(closeBtn) {
-    closeBtn.onclick = function() {
-        modal.style.display = 'none';
+// دالة تغيير الصورة (لليمين أو اليسار)
+window.changeImage = function(direction) {
+    currentImageIndex += direction;
+    
+    // الدوران: إذا وصلنا للآخر نرجعو للأول والعكس
+    if (currentImageIndex >= currentGalleryArray.length) {
+        currentImageIndex = 0;
+    } else if (currentImageIndex < 0) {
+        currentImageIndex = currentGalleryArray.length - 1;
     }
+    
+    // تأثير التغيير (Fade)
+    modalImg.style.opacity = '0.5';
+    setTimeout(() => {
+        modalImg.src = currentGalleryArray[currentImageIndex];
+        modalImg.style.opacity = '1';
+    }, 100);
 }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-}
+// 1. الإغلاق
+if(closeBtn) closeBtn.onclick = () => modal.style.display = 'none';
+window.onclick = (event) => { if (event.target == modal) modal.style.display = 'none'; }
 
+// 2. التحكم بلوحة المفاتيح
 document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape" && modal && modal.style.display === "block") {
-        modal.style.display = 'none';
+    if (modal && modal.style.display === "block") {
+        if (event.key === "Escape") {
+            modal.style.display = 'none';
+        } else if (event.key === "ArrowLeft") {
+            changeImage(1); // السهم الأيسر
+        } else if (event.key === "ArrowRight") {
+            changeImage(-1); // السهم الأيمن
+        }
     }
 });
+
+// 3. دعم السحب باللمس في الهواتف (Swipe)
+let touchstartX = 0;
+let touchendX = 0;
+
+if(modalImg) {
+    modalImg.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX;
+    });
+
+    modalImg.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+}
+
+function handleSwipe() {
+    if (touchendX < touchstartX - 40) {
+        // سحب لليسار
+        changeImage(1); 
+    }
+    if (touchendX > touchstartX + 40) {
+        // سحب لليمين
+        changeImage(-1);
+    }
+}

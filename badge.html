@@ -69,6 +69,10 @@
     <!-- نافذة عرض الصور (Lightbox Modal) -->
     <div id="image-modal" class="modal">
         <span class="close-modal">&times;</span>
+        <!-- أزرار التنقل الجديدة -->
+        <a class="prev-btn" onclick="changeImage(-1)">&#10095;</a>
+        <a class="next-btn" onclick="changeImage(1)">&#10094;</a>
+        
         <img class="modal-content" id="expanded-img">
     </div>
     

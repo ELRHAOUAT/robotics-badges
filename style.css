@@ -310,3 +310,42 @@ body[dir="ltr"] .role-badge {
     /* تعديل بسيط للبادج ديال الدور باش يجي مقاد فاليسار */
     display: inline-block;
 }
+
+/* =========================================
+   أزرار التنقل في نافذة الصور
+========================================= */
+.prev-btn, .next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px 20px;
+    margin-top: -30px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1010;
+    text-decoration: none;
+}
+
+/* موضع الأسهم */
+.next-btn { left: 15px; } /* السهم التالي على اليسار */
+.prev-btn { right: 15px; } /* السهم السابق على اليمين */
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #21a1d3; /* اللون الأزرق ديال النادي */
+}
+
+/* تصغير الأزرار في الهواتف */
+@media screen and (max-width: 600px) {
+    .prev-btn, .next-btn {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+    .next-btn { left: 5px; }
+    .prev-btn { right: 5px; }
+}
