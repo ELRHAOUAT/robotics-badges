@@ -555,6 +555,31 @@
                 "en": "Programming wireless communication systems between the helmet and the motorcycle to exchange data and activate protection protocols when necessary."
             },
             "gallery": []
+        },
+        {
+            "id": "021",
+            "name": {
+                "ar": "إبراهيم أمنوحي",
+                "fr": "Brahim Amnouhi",
+                "en": "Brahim Amnouhi"
+            },
+            "profile_pic": "assets/profiles/021-brahim-amnouhi/profile.png",
+            "project": {
+                "ar": "مشروع مدينة الدريوش الذكية",
+                "fr": "Projet de la Ville Intelligente de Driouch",
+                "en": "Driouch Smart City Project"
+            },
+            "role": {
+                "ar": "مصمم للبنيات والتشجير",
+                "fr": "Concepteur des Structures et de l'Afforestation",
+                "en": "Structure and Afforestation Designer"
+            },
+            "description": {
+                "ar": "تصميم البنيات التحتية وتخطيط المساحات الخضراء والتشجير لتعزيز البيئة المستدامة في مدينة الدريوش الذكية.",
+                "fr": "Conception des infrastructures et planification des espaces verts et de l'afforestation pour promouvoir un environnement durable dans la ville intelligente de Driouch.",
+                "en": "Designing infrastructures and planning green spaces and afforestation to promote a sustainable environment in the Driouch Smart City."
+            },
+            "gallery": []
         }
     ]
 }
