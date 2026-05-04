@@ -582,6 +582,31 @@
             "gallery": []
         },
         {
+            "id": "022",
+            "name": { 
+                "ar": "طه لمو", 
+                "fr": "Taha Lmou", 
+                "en": "Taha Lmou" 
+            },
+            "profile_pic": "assets/profiles/022-taha-lmou/profile.png",
+            "project": { 
+                "ar": "مشروع جرس مؤسسة الوحدة الذكي", 
+                "fr": "Projet de Sonnerie Intelligente de l'Institution", 
+                "en": "Smart School Bell Project" 
+            },
+            "role": { 
+                "ar": "مهندس التصميم والبناء", 
+                "fr": "Ingénieur en Conception et Construction", 
+                "en": "Design and Construction Engineer" 
+            },
+            "description": { 
+                "ar": "تصميم الهيكل الخارجي وتثبيت المكونات الإلكترونية للنظام بشكل آمن وعملي داخل المؤسسة.", 
+                "fr": "Conception de la structure externe et installation sécurisée et pratique des composants électroniques du système au sein de l'institution.", 
+                "en": "Designing the external structure and securely installing the system's electronic components within the institution." 
+            },
+            "gallery": []
+        },
+        {
             "id": "023",
             "name": {
                 "ar": "عبد الله لمو",
@@ -603,6 +628,81 @@
                 "ar": "المسؤول عن التصميم الهندسي للهيكل الميكانيكي وتجميع الأجزاء لضمان استقرار وتوازن المركبة أثناء تتبع المسار.",
                 "fr": "Responsable de la conception technique du châssis mécanique et de l'assemblage des pièces pour assurer la stabilité et l'équilibre du véhicule lors du suivi de trajectoire.",
                 "en": "Responsible for the engineering design of the mechanical chassis and assembly of parts to ensure vehicle stability and balance during path tracking."
+            },
+            "gallery": []
+        },
+        {
+            "id": "024",
+            "name": { 
+                "ar": "الأستاذ محمد الغوات", 
+                "fr": "Prof. Mohamed El Rhaouat", 
+                "en": "Prof. Mohamed El Rhaouat" 
+            },
+            "profile_pic": "assets/profiles/024-mohamed-elrhaouat/profile.png",
+            "project": { 
+                "ar": "مشروع رقمنة الكتاب المدرسي (المشرف العام)", 
+                "fr": "Projet de Numérisation du Manuel (Superviseur Général)", 
+                "en": "Textbook Digitization Project (General Supervisor)" 
+            },
+            "role": { 
+                "ar": "أستاذ المعلوميات ورئيس النادي", 
+                "fr": "Professeur d'Informatique et Président du Club", 
+                "en": "Informatics Teacher and Club President" 
+            },
+            "description": { 
+                "ar": "التأطير والتوجيه العام لجميع مشاريع النادي، وتطوير النسخة الرقمية التفاعلية للكتاب المدرسي لمادة المعلوميات لتعزيز التعلم الذاتي لدى التلاميذ.", 
+                "fr": "Encadrement général de tous les projets du club, et développement de la version numérique interactive du manuel d'informatique pour favoriser l'auto-apprentissage.", 
+                "en": "General supervision of all club projects, and development of the interactive digital version of the informatics textbook to promote self-learning." 
+            },
+            "gallery": []
+        },
+        {
+            "id": "025",
+            "name": {
+                "ar": "آلاء زروق",
+                "fr": "Alae Zarrouk",
+                "en": "Alae Zarrouk"
+            },
+            "profile_pic": "assets/profiles/025-alae-zarrouk/profile.png",
+            "project": {
+                "ar": "مشروع صناعة المحتوى والأفلام بالذكاء الاصطناعي",
+                "fr": "Projet de création de contenu et de films par IA",
+                "en": "AI Content Creation and Filmmaking Project"
+            },
+            "role": {
+                "ar": "مهندسة الأوامر وكاتبة السيناريو",
+                "fr": "Ingénieure de Prompts et Scénariste",
+                "en": "Prompt Engineer and Scriptwriter"
+            },
+            "description": {
+                "ar": "متخصصة في صياغة الأفكار وهندسة الأوامر (Prompts) للتخاطب مع النماذج اللغوية لتوليد سيناريوهات هادفة وتصميم الهوية البصرية للشخصيات.",
+                "fr": "Spécialisée dans la formulation d'idées et l'ingénierie de prompts pour générer des scénarios significatifs et concevoir l'identité visuelle des personnages via des modèles de langage.",
+                "en": "Specialized in idea formulation and prompt engineering to communicate with language models, generating purposeful scripts and designing visual identities for characters."
+            },
+            "gallery": []
+        },
+        {
+            "id": "026",
+            "name": {
+                "ar": "أسمهان زروق",
+                "fr": "Asmaehan Zarrouk",
+                "en": "Asmaehan Zarrouk"
+            },
+            "profile_pic": "assets/profiles/026-asmaehan-zarrouk/profile.png",
+            "project": {
+                "ar": "مشروع صناعة المحتوى والأفلام بالذكاء الاصطناعي",
+                "fr": "Projet de création de contenu et de films par IA",
+                "en": "AI Content Creation and Filmmaking Project"
+            },
+            "role": {
+                "ar": "مصممة الفيديوهات والمونتاج الذكي",
+                "fr": "Conceptrice Vidéo et Montage Intelligent",
+                "en": "Video Designer and Smart Editing"
+            },
+            "description": {
+                "ar": "مسؤولة عن تحريك الصور المولدة وتحويلها إلى مقاطع سينمائية، مع دمج التعليق الصوتي والمؤثرات لإنتاج الأفلام التعليمية والتوعوية.",
+                "fr": "Responsable de l'animation des images générées en séquences cinématographiques, intégrant la voix hors champ et les effets pour produire des films éducatifs.",
+                "en": "Responsible for animating generated images into cinematic clips, integrating voiceovers and effects to produce educational and awareness films."
             },
             "gallery": []
         }
