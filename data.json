@@ -580,6 +580,31 @@
                 "en": "Designing infrastructures and planning green spaces and afforestation to promote a sustainable environment in the Driouch Smart City."
             },
             "gallery": []
+        },
+        {
+            "id": "023",
+            "name": {
+                "ar": "عبد الله لمو",
+                "fr": "Abdallah Lmou",
+                "en": "Abdallah Lmou"
+            },
+            "profile_pic": "assets/profiles/023-abdallah-lmou/profile.png",
+            "project": {
+                "ar": "مشروع المركبة ذاتية القيادة وتتبع المسار",
+                "fr": "Projet de véhicule autonome et de suivi de trajectoire",
+                "en": "Autonomous Vehicle and Path Tracking Project"
+            },
+            "role": {
+                "ar": "مهندس الأنظمة الميكانيكية للهيكل",
+                "fr": "Ingénieur des systèmes mécaniques du châssis",
+                "en": "Chassis Mechanical Systems Engineer"
+            },
+            "description": {
+                "ar": "المسؤول عن التصميم الهندسي للهيكل الميكانيكي وتجميع الأجزاء لضمان استقرار وتوازن المركبة أثناء تتبع المسار.",
+                "fr": "Responsable de la conception technique du châssis mécanique et de l'assemblage des pièces pour assurer la stabilité et l'équilibre du véhicule lors du suivi de trajectoire.",
+                "en": "Responsible for the engineering design of the mechanical chassis and assembly of parts to ensure vehicle stability and balance during path tracking."
+            },
+            "gallery": []
         }
     ]
 }
